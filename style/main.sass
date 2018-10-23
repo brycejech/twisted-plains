@@ -18,6 +18,7 @@ body
     font-family: 'Open Sans', sans-serif
     color: #424242
     overflow-x: hidden
+    font-size: 1.8rem
 
 h1,
 h2,
@@ -47,6 +48,16 @@ p
 .tall
     line-height: 1.7
 
+.modal-dialog
+    margin-top: 10%
+
+.modal-close
+    font-size: 32px
+
+.modal-content
+    h3
+        margin-top: 0
+
 #bd
     position: fixed
     top: 0
@@ -75,7 +86,7 @@ p
 #content
     z-index: 2
     position: absolute
-    top: 25%
+    top: 20%
     left: 50%
     transform: translateX(-50%)
     display: inline-block
@@ -84,7 +95,7 @@ p
     width: 600px
     max-width: 90%
 
-#contact-button
+#contact-btn, #submit-btn
     display: block
     margin: 0 auto
     outline: none
@@ -102,4 +113,12 @@ p
 
     &:hover
         background-color: $mustard
-        color: #DDDDDD
+        color: #EFEFEF
+
+#submit-btn
+    max-width: 60%
+
+input, textarea
+    &:focus
+        border-color: $mustard
+        box-shadow: 0 0 5px 0 rgba($mustard, 0.5), 0 0 2px 0 rgba($mustard, 0.5) inset
