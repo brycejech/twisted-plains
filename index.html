@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Twisted Plains</title>
 
+        <link type="text/css" rel="stylesheet" href="https://basefront.brycejech.com/v0.1.0/basefront_v0.1.0.min.css">
+        <link type="text/css" rel="stylesheet" href="https://brycejech.com/simple-modal/v1.0.2/modal.min.css">
+
         <link type="text/css" rel="stylesheet" href="style/main.css">
     </head>
     <body>
@@ -21,13 +24,46 @@
             <p class="text-center tall">
                 <span class="bold">Available for projects or contracts needing:</span>
                 <br>
-                JavaScript / NodeJS, Python, C#, ASP.NET
+                JavaScript / NodeJS, Python, C#
                 <br>
                 UI / UX, CSS, Responsive Design
                 <br>
 
             </p>
-            <button id="contact-button" class="button" role="button">CONTACT</button>
+            <button id="contact-btn" class="button" role="button" data-target="#contact-modal" data-toggle="modal">CONTACT</button>
         </div>
+
+        <div id="contact-modal" class="modal modal-lg">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-close">&times;</div>
+                    <h3 class="text-center">Contact Twisted Plains</h3>
+                    <form method="POST" action="https://formspree.io/bryce@brycejech.com">
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" name="FirstName" placeholder="First Name">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="LastName" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <input type="email" name="Email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea name="Message" rows="10" placeholder="Your Message"></textarea>
+                            </div>
+                        </div>
+                        <input id="submit-btn" type="submit" value="SEND">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://brycejech.com/simple-modal/v1.0.2/modal.js"></script>
     </body>
 </html>
